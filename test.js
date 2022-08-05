@@ -1,8 +1,27 @@
-var a = 1;
-var sum =0;
-while (a <= 10){
-sum+=a;
-console.log(a)
-a++
+const div = document.getElementById('container');
+
+ 
+div.textContent = 'Replacement text';
+ 
+div.innerHTML = `<span style="background-color: lime">Replacement HTML</span>`;
+
+ 
+div.insertAdjacentText('beforeend', ' appended text');
+
+ 
+div.insertAdjacentHTML(
+  'beforeend',
+  `<span style="background-color: cyan"> appended HTML</code>`,
+);
+
+var sum=0;
+
+for(var i = 1;i<=100;i++){
+    sum+=i;
 }
-console.log(sum)
+
+const result = document.getElementById('sum');
+
+result.innerHTML = `<span style="background-color: lime">`+'Result 1-100 sum = '+ sum +`</span>`;
+
+
